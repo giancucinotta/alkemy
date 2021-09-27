@@ -1,7 +1,7 @@
 const {Router} = require('express');
 
 const user = require('./user/users');
-const logs = require('./logs/logs');
+const logs = require('./interactions/interactions');
 
 const router = Router();
 

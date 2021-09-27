@@ -9,13 +9,19 @@ module.exports = (sequelize) => {
     },
     concept: {
       type: DataTypes.STRING,
-      is: /^[a-zA-Z]+(([ ,.-][a-zA-Z ])?[a-zA-Z]*)*$/
+      allowNull: false,
+      is: /^[a-zA-Z0-9]+(([ ,.-][a-zA-Z0-9 ])?[a-zA-Z0-9]*)*$/
     },
     amount: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    transactionType: {
+    transaction_type: {
+      type: DataTypes.ENUM,
+      allowNull: false,
+      values: ['Credit', 'Debit']
+    },
+    date: {
       type: DataTypes.STRING,
       allowNull: false
     }

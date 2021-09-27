@@ -1,12 +1,11 @@
 const {Router} = require('express');
 
 const user = require('./user/users');
+const logs = require('./logs/logs');
 
 const router = Router();
 
-router.get('/', (req,res,next) => {
-    return res.send('Response with a resource')
-})
-router.use('/', user); // check emma
+router.use('/', user);
+router.use('/', logs);
 
 module.exports = router;

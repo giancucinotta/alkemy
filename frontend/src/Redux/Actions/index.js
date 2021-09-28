@@ -1,10 +1,12 @@
 import axios from "axios";
-import { url } from "../../constantURL"
+import { url } from "../../constantURL";
+import {
+    NEW_USER_DETAIL
+} from "../constants";
 
-
-export const setNewUser = (user_name, name, last_name, email, password) => {
+export const setNewUser = (body) => {
     return (dispatch) => {
-        axios.post(`${url}/users/new`)
+        axios.post(`${url}/users/new`, body)
             .then((response) => response.json())
             .then((response) =>
                 dispatch({

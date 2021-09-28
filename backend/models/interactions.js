@@ -13,7 +13,7 @@ module.exports = (sequelize) => {
       is: /^[a-zA-Z0-9]+(([ ,.-][a-zA-Z0-9 ])?[a-zA-Z0-9]*)*$/
     },
     amount: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false
     },
     transaction_type: {

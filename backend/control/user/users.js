@@ -37,8 +37,8 @@ async function getUser(req, res, next) {
                     exclude
                 }
             });
-        if (findUser.password === password) return res.status(200).json(findUser);
-        if (findUser.password !== password) return res.status(200).json('Incorrect');
+        if (findUser.password === password) return res.status(200).json({'validation': 'Correct'});
+        if (findUser.password !== password) return res.status(200).json({'validation': 'Incorrect'});
     } catch (error) {
         return next(error);
     };

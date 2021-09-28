@@ -1,1 +1,4 @@
-export const NEW_USER_DETAIL = 'NEW_USER_DETAIL';
+export const NEW_USER_DATA = 'NEW_USER_DATA';
+export const LOGIN_VALIDATION = 'LOGIN_VALIDATION';
+export const USER_NEW_DATA = 'USER_NEW_DATA';
+export const USER_NEW_PASS = 'USER_NEW_PASS';

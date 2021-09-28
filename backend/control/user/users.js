@@ -55,7 +55,7 @@ async function updateUser(req, res, next) {
         user.last_name = last_name;
         user.email = email;
         user.save();
-        return res.status(200).json('Updated user');
+        return res.status(200).json(user);
     } catch (error) {
         return next(error);
     };
@@ -70,7 +70,7 @@ async function updatePassword(req, res, next) {
         if (!user) return res.status(400).json('Invalid User ID');
         user.password = password;
         user.save();
-        return res.status(200).json('Updated password');
+        return res.status(200).json(user);
     } catch (error) {
         return next(error);
     };
